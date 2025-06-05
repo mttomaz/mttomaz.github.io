@@ -21,17 +21,23 @@ fetch(repos)
 const age = document.querySelector(".age");
 age.textContent = `${Math.floor((new Date() - new Date("2004-04-06")) / 31557600000)}`;
 
-const btn = document.getElementById('lang-toggle');
-let currentLang = 'pt';
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('lang-toggle');
+  let currentLang = 'pt';
 
-function toggleLanguage() {
-  currentLang = currentLang === 'en' ? 'pt' : 'en';
+  function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'pt' : 'en';
 
-  document.querySelectorAll('.lang.en').forEach(el => el.classList.toggle('show', currentLang === 'en'));
-  document.querySelectorAll('.lang.pt').forEach(el => el.classList.toggle('show', currentLang === 'pt'));
+    document.querySelectorAll('.lang.en').forEach(el =>
+      el.classList.toggle('show', currentLang === 'en')
+    );
+    document.querySelectorAll('.lang.pt').forEach(el =>
+      el.classList.toggle('show', currentLang === 'pt')
+    );
 
-  btn.textContent = currentLang === 'en' ? 'english' : 'português';
-}
+    btn.textContent = currentLang === 'en' ? 'english' : 'português';
+  }
 
-toggleLanguage(); // Inicializa com 'en'
-btn.addEventListener('click', toggleLanguage);
+  toggleLanguage();
+  btn.addEventListener('click', toggleLanguage);
+});
