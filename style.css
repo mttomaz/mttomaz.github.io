@@ -1,7 +1,7 @@
 :root {
   --bg: #101010;
-  --ab: linear-gradient(to bottom right, #1a1a1a, #151515);
-  --hw: linear-gradient(to bottom right, #1f1f1f, #1a1a1a);
+  --ab: #1a1a1a;
+  --hw: #1f1f1f;
   --fg: #c8c3c3;
   --pr: #e8e3e3;
 }
@@ -55,6 +55,11 @@ main {
   padding: 5em 0;
 }
 
+h1 {
+  font-size: 32pt;
+  margin-bottom: -1rem;
+}
+
 h1, h2, h3 {
   color: var(--pr);
 }
@@ -102,6 +107,13 @@ main > p {
 
 .cards {
   grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  & p:last-child {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: auto;
+  }
 }
 
 span {
@@ -113,10 +125,9 @@ article, .socials a {
 }
 
 article {
+  height: 65%;
   display: flex;
   justify-content: flex-start;
-
-  text-transform: capitalize;
   flex-direction: column;
 
   gap: 1em;
