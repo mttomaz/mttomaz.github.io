@@ -60,6 +60,31 @@ h1 {
   margin-bottom: -1rem;
 }
 
+.lang-toggle-wrapper {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#lang-toggle {
+  background-color: var(--hw);
+  border-radius: 1em;
+  border: none;
+  color: var(--fg);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.lang.pt,
+.lang.en {
+  display: none;
+}
+
+.lang.show {
+  display: block;
+}
+
 h1, h2, h3 {
   color: var(--pr);
 }
