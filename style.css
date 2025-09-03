@@ -141,8 +141,8 @@ main > p {
   }
 }
 
-span {
-  color: #D9BC8C;
+span.count {
+  margin-top: 0.3rem;
 }
 
 article, .socials a {

@@ -12,7 +12,10 @@ fetch(repos)
         <a href="${repo.html_url}"><article>
           <h3>${repo.name}</h3>
           <p>${repo.description}</p>
-          <p><span class="material-symbols-rounded">star</span> ${repo.stargazers_count}</p>
+          <p>
+            <span>⭐</span>
+            <span class="count">${repo.stargazers_count}</span>
+          </p>
         </article></a>
       `;
       }),
